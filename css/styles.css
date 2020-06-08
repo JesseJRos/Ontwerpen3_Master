@@ -12,12 +12,31 @@ h1 {
     font-size: 8em;
     font-family: 'cornerstone', Arial;
     color: white;
+    width: 100%;
     text-align: center;
     border-top: 10px solid #FFC804;
     border-bottom: 10px solid #FFC804;
     padding-top: 10px;
     margin-top: 10px;
 }
+
+@media all and (max-width: 1373px) {
+    h1 {
+      background-color: lightblue;
+      font-size: 4em;
+      border-top: 8px solid #FFC804;
+      border-bottom: 8px solid #FFC804;
+    }
+  }
+
+  @media all and (max-width: 703px) {
+    h1 {
+      background-color: hotpink;
+      font-size: 2.6em;
+      border-top: 7px solid #FFC804;
+      border-bottom: 7px solid #FFC804;
+    }
+  }
 
 .skylineTop {
     opacity: 0.2;
@@ -29,18 +48,32 @@ h1 {
     display: block;
 }
 
+.bottomImage {
+    width: 100%;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.polaroid {
+    width: 200px;
+    margin-left: 380px;
+    margin-right: -360px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+}
+
 .alinea1 {
     margin-left: 250px;
     margin-top: -450px;
 }
-
 .h21 {
     font-family: 'Bebas Neue', Arial;
     font-size: 2em;
     color: #FFC804;
     margin-bottom: -25px;
 }
-
 .p1 {
     font-family: 'Bebas Neue', Arial;
     font-size: 1.5em;
@@ -48,7 +81,6 @@ h1 {
     border-left: 5px solid #FFC804;
     padding-left: 5px;
 }
-
 .fist1 {
     position: absolute;
     height: 70px;
@@ -57,19 +89,38 @@ h1 {
 }
 
 
+.goFundFamily {
+    width: 300px;
+    float: right;
+    /* margin-right: -65px; */
+    /* transform: rotate(-40deg); */
+    /* margin-top: -120px; */
+    animation: signRight 1s ease-in-out forwards;
+}
+
+@keyframes signRight {
+    from {
+        transform: rotate(0deg);
+        margin-right: -320px;
+        margin-top: -100px;
+    }
+    to {
+        transform: rotate(-45deg);
+        margin-right: -75px;
+        margin-top: -140px;
+    }
+}
 
 .alinea2 {
     margin-left: 450px;
     margin-top: 100px;
 }
-
 .h22 {
     font-family: 'Bebas Neue', Arial;
     font-size: 2em;
     color: #FFC804;
-    margin-bottom: -15px;
+    margin-bottom: -25px;
 }
-
 .p2 {
     font-family: 'Bebas Neue', Arial;
     font-size: 1.5em;
@@ -77,7 +128,6 @@ h1 {
     border-left: 5px solid #FFC804;
     padding-left: 5px;
 }
-
 .fist2 {
     position: absolute;
     height: 70px;
@@ -90,14 +140,12 @@ h1 {
     margin-left: 250px;
     margin-top: 100px;
 }
-
 .h23 {
     font-family: 'Bebas Neue', Arial;
     font-size: 2em;
     color: #FFC804;
-    margin-bottom: -15px;
+    margin-bottom: -25px;
 }
-
 .p3 {
     font-family: 'Bebas Neue', Arial;
     font-size: 1.5em;
@@ -105,10 +153,94 @@ h1 {
     border-left: 5px solid #FFC804;
     padding-left: 5px;
 }
-
 .fist3 {
     position: absolute;
     height: 70px;
     margin-left: -80px;
     margin-top: 60px;
+}
+
+
+.signPetitions {
+    width: 180px;
+    float: left;
+    /* margin-left: -40px; */
+    /* transform: rotate(40deg); */
+    /* margin-top: 30px; */
+    animation: signLeft 1s ease-out forwards;
+}
+
+@keyframes signLeft {
+    from {
+        transform: rotate(0deg);
+        margin-left: -190px;
+        margin-top: 20px;
+    }
+    to {
+        transform: rotate(30deg);
+        margin-left: -70px;
+        margin-top: 50px;
+    }
+}
+
+.alinea4 {
+    margin-left: 450px;
+    margin-top: 100px;
+}
+.h24 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: #FFC804;
+    margin-bottom: -25px;
+}
+.p4 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1.5em;
+    color: white;
+    border-left: 5px solid #FFC804;
+    padding-left: 5px;
+}
+.fist4 {
+    position: absolute;
+    height: 70px;
+    margin-left: -80px;
+    margin-top: 120px;
+}
+
+
+.alinea5 {
+    margin-left: 250px;
+    margin-top: 100px;
+}
+.h25 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: #FFC804;
+    margin-bottom: -25px;
+}
+.p5 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1.5em;
+    color: white;
+    border-left: 5px solid #FFC804;
+    padding-left: 5px;
+}
+.fist5 {
+    position: absolute;
+    height: 70px;
+    margin-left: -80px;
+    margin-top: 105px;
+}
+.readMore {
+    background-color: #FFC804;
+    border-radius: 30px;
+    border: none;
+    color: black;
+    padding: 12px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: right;
+    margin-right: 250px;
 }
