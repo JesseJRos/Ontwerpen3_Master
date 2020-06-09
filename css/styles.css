@@ -8,6 +8,11 @@ body {
     background-color: black;
 }
 
+.header {
+    width: 100%;
+    margin-top: -10px;
+}
+
 h1 {
     font-size: 8em;
     font-family: 'cornerstone', Arial;
@@ -17,7 +22,20 @@ h1 {
     border-top: 10px solid #FFC804;
     border-bottom: 10px solid #FFC804;
     padding-top: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
+    animation: titleIn 1.5s ease-in-out;
+}
+
+@keyframes titleIn {
+    0% {
+        margin-top: 300px;
+    }
+    50% {
+        margin-top: 300px;
+    }
+    100% {
+        margin-top: 0px;
+    }
 }
 
 @media all and (max-width: 1373px) {
@@ -45,23 +63,28 @@ h1 {
     margin-top: -90px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 0em;
     display: block;
+    animation: skylineFadeIn 4s ease-in-out forwards;
 }
 
-.bottomImage {
-    width: 100%;
-    margin-top: -90px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-.polaroid {
-    width: 200px;
-    margin-left: 380px;
-    margin-right: -360px;
-    margin-bottom: -50px;
-    margin-top: 50px;
+@keyframes skylineFadeIn {
+    0% {
+        opacity: 0;
+        padding-top: 25em;
+    }
+    25% {
+        opacity: 0;
+        padding-top: 25em;
+    }
+    75% {
+        opacity: 0.2;
+        padding-top: 25em;
+    }
+    100% {
+        opacity: 0.2;
+        padding-top: 0em;
+    }
 }
 
 .alinea1 {
@@ -88,13 +111,15 @@ h1 {
     margin-top: 90px;
 }
 
-
 .goFundFamily {
     width: 300px;
     float: right;
-    /* margin-right: -65px; */
-    /* transform: rotate(-40deg); */
-    /* margin-top: -120px; */
+    margin-right: -320px;
+    transform: rotate(-0deg);
+    margin-top: -170px;
+}
+
+.animateFundFamily {
     animation: signRight 1s ease-in-out forwards;
 }
 
@@ -102,12 +127,103 @@ h1 {
     from {
         transform: rotate(0deg);
         margin-right: -320px;
-        margin-top: -100px;
+        margin-top: -150px;
     }
     to {
         transform: rotate(-45deg);
         margin-right: -75px;
-        margin-top: -140px;
+        margin-top: -180px;
+    }
+}
+
+.polaroidContainer {
+    position: relative;
+    /* background-color: blue; */
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.polaroid1 {
+    width: 230px;
+    margin-left: -250px;
+    margin-right: -360px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.polaroid2 {
+    width: 230px;
+    margin-left: -250px;
+    margin-right: -360px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.polaroid3 {
+    width: 230px;
+    margin-left: -250px;
+    margin-right: -360px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+/* .polaroidContainer > img:nth-of-type(1) {
+    animation: polaroidSlideIn1 1s 1s ease-in-out forwards;
+}
+
+.polaroidContainer > img:nth-of-type(2) {
+    animation: polaroidSlideIn2 1s 2s ease-in-out forwards;
+}
+
+.polaroidContainer > img:nth-of-type(3) {
+    animation: polaroidSlideIn3 1s 3s ease-in-out forwards;
+} */
+
+.animatePolaroid1 {
+    animation: polaroidSlideIn1 1s 1s ease-in-out forwards;
+}
+
+.animatePolaroid2 {
+    animation: polaroidSlideIn2 1s 2s ease-in-out forwards;
+}
+
+.animatePolaroid3 {
+    animation: polaroidSlideIn3 1s 3s ease-in-out forwards;
+}
+
+@keyframes polaroidSlideIn1 {
+    from {
+        margin-left: -220px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 380px;
+        opacity: 1;
+    }
+}
+
+@keyframes polaroidSlideIn2 {
+    from {
+        margin-left: -220px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 630px;
+        opacity: 1;
+    }
+}
+
+@keyframes polaroidSlideIn3 {
+    from {
+        margin-left: -220px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 880px;
+        opacity: 1;
     }
 }
 
@@ -164,10 +280,11 @@ h1 {
 .signPetitions {
     width: 180px;
     float: left;
-    /* margin-left: -40px; */
-    /* transform: rotate(40deg); */
-    /* margin-top: 30px; */
-    animation: signLeft 1s ease-out forwards;
+    margin-left: -40px;
+    transform: rotate(40deg);
+    margin-top: 30px;
+    /* animation: signLeft 1s ease-out forwards; */
+    /* animation: wiggle 1.5s 1.5s ease-in-out;    */
 }
 
 @keyframes signLeft {
@@ -180,6 +297,36 @@ h1 {
         transform: rotate(30deg);
         margin-left: -70px;
         margin-top: 50px;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(4deg);
+    }
+    30% {
+        transform: rotate(-5deg);
+    }
+    45% {
+        transform: rotate(6deg);
+    }
+    58% {
+        transform: rotate(-4deg);
+    }
+    68% {
+        transform: rotate(3deg);
+    }
+    82% {
+        transform: rotate(0deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -243,4 +390,12 @@ h1 {
     font-size: 16px;
     float: right;
     margin-right: 250px;
+}
+
+.bottomImage {
+    width: 100%;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
