@@ -120,6 +120,21 @@ h1 {
     margin-left: -80px;
     margin-top: 90px;
 }
+.fist1:hover {
+    animation: pulse 1s ease-in-out infinite;
+    border-radius: 50px;
+}
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 60, 0, 1);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 60, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 60, 0, 0);
+    }
+  }
 
 .goFundFamily {
     width: 300px;
@@ -127,10 +142,15 @@ h1 {
     margin-right: -320px;
     transform: rotate(-0deg);
     margin-top: -170px;
+    filter: contrast(0);
+}
+
+.goFundFamily:hover {
+    filter: contrast(1);
 }
 
 .animateFundFamily {
-    animation: signRight 1s ease-out forwards;
+    animation: signRight 1s ease-out forwards, wiggleR 1.5s 5s ease-in-out;
 }
 
 @keyframes signRight {
@@ -144,6 +164,18 @@ h1 {
         margin-right: -75px;
         margin-top: -180px;
     }
+}
+
+@keyframes wiggleR {
+    0% {transform: rotate(-45deg);}
+    20% {transform: rotate(-48deg);}
+    30% {transform: rotate(-42deg);}
+    45% {transform: rotate(-48deg);}
+    58% {transform: rotate(-44deg);}
+    68% {transform: rotate(-48deg);}
+    82% {transform: rotate(-45deg);}
+    90% {transform: rotate(-47deg);}
+    100% {transform: rotate(-45deg);}
 }
 
 .alinea2 {
@@ -177,6 +209,10 @@ h1 {
     margin-left: -80px;
     margin-top: 70px;
 }
+.fist2:hover {
+    animation: pulse 1s ease-in-out infinite;
+    border-radius: 50px;
+}
 
 .polaroidContainer {
     position: relative;
@@ -208,13 +244,13 @@ h1 {
 }
 
 .animatePolaroid1 {
-    animation: polaroidSlideIn1 1s 1.5s ease-in-out forwards;
+    animation: polaroidSlideIn1 1s 1.5s ease-out forwards;
 }
 .animatePolaroid2 {
-    animation: polaroidSlideIn2 1s 2.5s ease-in-out forwards;
+    animation: polaroidSlideIn2 1s 2.5s ease-out forwards;
 }
 .animatePolaroid3 {
-    animation: polaroidSlideIn3 1s 3.5s ease-in-out forwards;
+    animation: polaroidSlideIn3 1s 3.5s ease-out forwards;
 }
 
 @keyframes polaroidSlideIn1 {
@@ -278,19 +314,26 @@ h1 {
     margin-left: -80px;
     margin-top: 60px;
 }
-
+.fist3:hover {
+    animation: pulse 1s ease-in-out infinite;
+    border-radius: 50px;
+}
 
 .signPetitions {
     width: 180px;
     float: left;
-    margin-left: -40px;
-    transform: rotate(40deg);
+    margin-left: -400px;
+    transform: rotate(0deg);
     margin-top: 30px;
-    /* animation: wiggle 1.5s 1.5s ease-in-out;    */
+    filter: contrast(0);
 }
 
 .animateSignPetitions {
-    animation: signLeft 1s ease-out forwards;
+    animation: signLeft 1s 1s ease-out forwards, wiggleL 1.5s 5s ease-in-out;
+}
+
+.signPetitions:hover {
+    filter: contrast(1);
 }
 
 @keyframes signLeft {
@@ -306,34 +349,16 @@ h1 {
     }
 }
 
-@keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-    20% {
-        transform: rotate(4deg);
-    }
-    30% {
-        transform: rotate(-5deg);
-    }
-    45% {
-        transform: rotate(6deg);
-    }
-    58% {
-        transform: rotate(-4deg);
-    }
-    68% {
-        transform: rotate(3deg);
-    }
-    82% {
-        transform: rotate(0deg);
-    }
-    90% {
-        transform: rotate(2deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+@keyframes wiggleL {
+    0% {transform: rotate(30deg);}
+    20% {transform: rotate(34deg);}
+    30% {transform: rotate(25deg);}
+    45% {transform: rotate(36deg);}
+    58% {transform: rotate(27deg);}
+    68% {transform: rotate(33deg);}
+    82% {transform: rotate(30deg);}
+    90% {transform: rotate(32deg);}
+    100% {transform: rotate(30deg);}
 }
 
 .alinea4 {
@@ -366,7 +391,10 @@ h1 {
     margin-left: -80px;
     margin-top: 120px;
 }
-
+.fist4:hover {
+    animation: pulse 1s ease-in-out infinite;
+    border-radius: 50px;
+}
 
 .alinea5 {
     margin-left: 250px;
@@ -398,6 +426,10 @@ h1 {
     margin-left: -80px;
     margin-top: 105px;
 }
+.fist5:hover {
+    animation: pulse 1s ease-in-out infinite;
+    border-radius: 50px;
+}
 .readMore {
     background-color: #FFC804;
     border-radius: 30px;
@@ -420,20 +452,162 @@ h1 {
     margin-right: auto;
     display: block;
 }
-
 .animateBottomImage {
-    animation: zoomIn 0.8s 1s ease-in forwards;
+    animation: zoomIn 0.5s 0.8s ease-in forwards;
 }
-
 @keyframes zoomIn {
     from {
         opacity: 0;
-        transform: scale(2);
+        transform: scale(3);
     }
     to {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.callToActionsL {
+    border-top: 8px solid #FFC804;
+    border-bottom: 2px solid #FFC804;
+}
+.h26 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 3em;
+    color: #FFC804;
+    margin-left: 180px;
+    margin-top: -80px;
+    position: relative;
+}
+.megaphone {
+    height: 90px;
+    margin-top: 40px;
+    margin-left: 80px;
+    position: block;
+}
+
+.educateYourself {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: rgb(236, 236, 236);
+    margin-left: 200px;
+}
+.link1 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1em;
+    color: #FFC804;
+    text-decoration-style: none;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 60, 0) 50%);
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.link1:hover {
+    background-position: -100%;
+}
+
+.signPetitionsLink {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: rgb(236, 236, 236);
+    margin-left: 200px;
+}
+.link2 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1em;
+    color: #FFC804;
+    text-decoration-style: none;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 60, 0) 50%);
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.link2:hover {
+    background-position: -100%;
+}
+
+.donateLink {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: rgb(236, 236, 236);
+    margin-left: 200px;
+}
+.link3 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1em;
+    color: #FFC804;
+    text-decoration-style: none;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 60, 0) 50%);
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.link3:hover {
+    background-position: -100%;
+}
+
+.callToActionsR {
+    float:right;
+    margin-top: -363px;
+}
+
+.rememberThemLink {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: rgb(236, 236, 236);
+    margin-right: 150px;
+}
+.link4 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1em;
+    color: #FFC804;
+    text-decoration-style: none;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 60, 0) 50%);
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.link4:hover {
+    background-position: -100%;
+}
+
+.contactRepsLink {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: rgb(236, 236, 236);
+    margin-right: 150px;
+}
+.link5 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1em;
+    color: #FFC804;
+    text-decoration-style: none;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 60, 0) 50%);
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.link5:hover {
+    background-position: -100%;
+}
+
+.fundFamilyLink {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 2em;
+    color: rgb(236, 236, 236);
+    margin-right: 150px;
+}
+.link6 {
+    font-family: 'Bebas Neue', Arial;
+    font-size: 1em;
+    color: #FFC804;
+    text-decoration-style: none;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 60, 0) 50%);
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.link6:hover {
+    background-position: -100%;
 }
 
 /* Credits
