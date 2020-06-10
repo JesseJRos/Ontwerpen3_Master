@@ -61,3 +61,31 @@ document.addEventListener('scroll', function (e) {
         document.getElementById('animatedPolaroid3').classList.remove('animatePolaroid3');
      }
   });
+
+// Sign Petitions
+document.addEventListener('scroll', function (e) {
+    var top  = window.pageYOffset + window.innerHeight,
+        isVisible = top > document.getElementById('idSignPetitions').offsetTop,
+        offScreen = top < document.getElementById('idSignPetitions').offsetTop;
+  
+     if (isVisible) {
+       document.getElementById('idSignPetitions').classList.add('animateSignPetitions');
+     }
+     if (offScreen) {
+        document.getElementById('idSignPetitions').classList.remove('animateSignPetitions');
+     }
+  });
+
+  // Bottom Image
+document.addEventListener('scroll', function (e) {
+    var top  = window.pageYOffset + window.innerHeight,
+        isVisible = top > document.getElementById('idBottomImage').offsetTop,
+        offScreen = top < document.getElementById('idBottomImage').offsetTop;
+  
+     if (isVisible) {
+       document.getElementById('idBottomImage').classList.add('animateBottomImage');
+     }
+     if (offScreen) {
+        document.getElementById('idBottomImage').classList.remove('animateBottomImage');
+     }
+  });
