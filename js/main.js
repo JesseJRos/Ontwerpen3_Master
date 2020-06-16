@@ -6,6 +6,12 @@
 //   6 zet die id in beide if statements
 //   7 maak vervolgens de id aan in je css en style hem
 
+// Hide audio
+function audioHide() {
+    var audio = document.getElementById('audio');
+    audio.classList.toggle("audiohide");
+}
+
 // FundFamily sign
 document.addEventListener('scroll', function (e) {
     var top  = window.pageYOffset + window.innerHeight,
