@@ -39,10 +39,6 @@ p {
     margin-left: 86em;
 }
 
-/* .audiohide {
-    visibility: hidden;
-} */
-
 h1 {
     font-size: 8em;
     font-family: 'cornerstone', Arial;
@@ -70,7 +66,6 @@ h1 {
 
 @media all and (max-width: 1373px) {
     h1 {
-      background-color: lightblue;
       font-size: 4em;
       border-top: 8px solid #FFC804;
       border-bottom: 8px solid #FFC804;
@@ -79,7 +74,6 @@ h1 {
 
   @media all and (max-width: 703px) {
     h1 {
-      background-color: hotpink;
       font-size: 2.6em;
       border-top: 7px solid #FFC804;
       border-bottom: 7px solid #FFC804;
@@ -87,7 +81,6 @@ h1 {
   }
 
 .skylineTop {
-    opacity: 0.2;
     transform: rotate(180deg);
     width: 75%;
     margin-top: -90px;
@@ -95,9 +88,8 @@ h1 {
     margin-right: auto;
     padding-top: 0em;
     position: relative;
-    /* display: block; */
     z-index: -1;
-    animation: skylineFadeIn 3s ease-in-out forwards;
+    opacity: 0;
 }
 
 @keyframes skylineFadeIn {
@@ -172,40 +164,35 @@ h1 {
 .goFundFamily {
     width: 300px;
     float: right;
-    margin-right: -320px;
-    margin-top: -170px;
-    transform: rotate(-0deg);
-}
-
-.goFundFamily:hover {
-    filter: invert(1);
+    margin-right: -90px;
+    margin-top: -180px;
+    transform: scale(1);
     transition: 1s ease;
+}
+.goFundFamily:hover {
+    filter: hue-rotate(310deg) saturate(3);
 }
 
 @keyframes pulseSign {
     0% {
-    margin-right: -75px;
-    margin-top: -180px;
-    transform: scale(1) rotate(-45deg);
+    transform: scale(1);
     }
     20% {
-    transform: scale(1.1) rotate(-45deg);
+    transform: scale(1);
     }
     40% {
-    transform: scale(0.9) rotate(-45deg);
+    transform: scale(0.9);
     }
     60% {
-    transform: scale(1.1) rotate(-45deg);
+    transform: scale(1.05);
     }
     100% {
-    margin-right: -75px;
-    margin-top: -180px;
-    transform: scale(1) rotate(-45deg);
+    transform: scale(1);
     }
 }
 
 .animateFundFamily {
-    animation: signRight 1s ease-out forwards;
+    animation: pulseSign 10s ease infinite;
 }
 
 @keyframes signRight {
@@ -226,18 +213,6 @@ h1 {
         margin-top: -180px;
         transform: scale(1) rotate(-45deg);
     }
-}
-
-@keyframes wiggleR {
-    0% {transform: rotate(-45deg);}
-    20% {transform: rotate(-48deg);}
-    30% {transform: rotate(-42deg);}
-    45% {transform: rotate(-48deg);}
-    58% {transform: rotate(-44deg);}
-    68% {transform: rotate(-48deg);}
-    82% {transform: rotate(-45deg);}
-    90% {transform: rotate(-47deg);}
-    100% {transform: rotate(-45deg);}
 }
 
 .alinea2 {
@@ -282,13 +257,11 @@ h1 {
     animation: pulse 1.5s ease-in-out infinite;
     border-radius: 50px;
 }
-
 .polaroidContainer {
     position: relative;
-    height: 250px;
     margin-top: 125px;
     margin-bottom: 150px;
-    /* background-color: royalblue; */
+    height: 250px;
 }
 .polaroidText {
     font-family: 'Bebas Neue', Arial;
@@ -300,9 +273,8 @@ h1 {
 }
 .polaroid1 {
     width: 230px;
-    margin-left: -250px;
+    margin-left: 380px;
     margin-right: -360px;
-    /* margin-bottom: -150px; */
     position: absolute;
     transition: 0.3s ease;
 }
@@ -325,9 +297,8 @@ h1 {
 
 .polaroid2 {
     width: 230px;
-    margin-left: -250px;
+    margin-left: 630px;
     margin-right: -360px;
-    /* margin-bottom: -150px; */
     position: absolute;
     transition: 0.3s ease;
 }
@@ -350,9 +321,8 @@ h1 {
 
 .polaroid3 {
     width: 230px;
-    margin-left: -250px;
+    margin-left: 880px;
     margin-right: -360px;
-    /* margin-bottom: -150px; */
     position: absolute;
     transition: 0.3s ease;
 }
@@ -459,20 +429,18 @@ h1 {
 }
 
 .signPetitions {
-    width: 180px;
+    width: 280px;
     float: left;
-    margin-left: -400px;
-    transform: rotate(0deg);
-    margin-top: 30px;
-    filter: contrast(0);
+    margin-left: -90px;
+    margin-top: 50px;
 }
 
 .animateSignPetitions {
-    animation: signLeft 1s 1s ease-out forwards, wiggleL 1.5s 5s ease-in-out;
+    animation: pulseSign 10s ease forwards;
 }
 
 .signPetitions:hover {
-    filter: contrast(1);
+    filter: hue-rotate(310deg) saturate(3);
 }
 
 @keyframes signLeft {

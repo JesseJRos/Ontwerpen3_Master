@@ -6,6 +6,7 @@
         <meta name="viewport" content="width = device-width, initial-scale = 1.0">
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
 
     <body>
@@ -20,7 +21,7 @@
         <h1> BLACK LIVES MATTER </h1>
         <img src="images/skylineNormal.png" class="skylineTop">
 
-    <div class="alinea1">
+    <div class="alinea1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-offset="100">
         <img src="images/fist.png" class="fist1">
         <h2 class="h21">'You shall know the truth, and the truth shall make you mad'
             <h5 class="h52">- Aldous Huxley</h5>
@@ -37,10 +38,11 @@
      </div>
 
     <a href="https://www.gofundme.com/f/georgefloyd">
-     <img src="images/goFundFamily.png" class="goFundFamily" id="idFundFamily">
+     <img src="images/goFundFamily.png" id="idFundFamily" class="goFundFamily"
+     data-aos="slide-left" data-aos-duration="1000" data-aos-offset="100">
     </a>
 
-     <div class="alinea2">
+     <div class="alinea2" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-100">
         <img src="images/fist.png" class="fist2">
         <h2 class="h22">'A RIOT IS THE LANGUAGE OF THE UNHEARD'
             <h5 class="h52">- Martin Luther King Jr.</h5>
@@ -50,23 +52,21 @@
             zowel vreedzaam als vurig verzet, dat nog altijd voortraast. Honderdduizenden Amerikanen gingen<br> 
             intussen de straat op.</p>
      </div>
+        <div class="polaroidContainer" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-100">
+            <p class="polaroidText" id="animatedPolaroidText">
+                 And on the 3rd day.. the states went up in flames
+            </p>
 
-     <div class="polaroidContainer">
-         <p class="polaroidText" id="animatedPolaroidText">
-             And on the 3rd day.. the states went up in flames
-         </p>
+            <img src="images/polaroid1b.png" class="polaroid1" data-aos-offset="100" data-aos="fade-left" data-aos-duration="1000" id="animatedPolaroid1">
+            <img src="images/imageDay1.jpg" class="foto1">
 
-        <img src="images/polaroid1b.png" class="polaroid1" id="animatedPolaroid1">
-        <img src="images/imageDay1.jpg" class="foto1">
+            <img src="images/polaroid2b.png" class="polaroid2" data-aos-offset="100" data-aos="fade-up" data-aos-duration="1600" id="animatedPolaroid2">
+            <img src="images/imageDay2.jpg" class="foto2">
 
-        <img src="images/polaroid2b.png" class="polaroid2" id="animatedPolaroid2">
-        <img src="images/imageDay2.jpg" class="foto2">
-
-        <img src="images/polaroid3b.png" class="polaroid3" id="animatedPolaroid3">
-        <img src="images/imageDay3.jpg" class="foto3">
-     </div>
-
-     <div class="alinea3">
+            <img src="images/polaroid3b.png" class="polaroid3" data-aos-offset="100" data-aos="fade-right" data-aos-duration="2000" id="animatedPolaroid3">
+            <img src="images/imageDay3.jpg" class="foto3">
+        </div>
+     <div class="alinea3" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-100">
         <img src="images/fist.png" class="fist3">
         <h2 class="h23">'THE COLOR OF MY SKIN IS NOT A CRIME'
             <h5 class="h52">- Maria Alejandra Cardona</h5>
@@ -77,10 +77,11 @@
      </div>
 
      <a href="https://blacklivesmatters.carrd.co/#petitions">
-       <img src="images/signPetitions.png" class="signPetitions" id="idSignPetitions">
+       <img src="images/signPetitions.png" class="signPetitions" id="idSignPetitions"
+       data-aos="slide-right" data-aos-duration="1000" data-aos-offset="100">
     </a>
 
-     <div class="alinea4">
+     <div class="alinea4" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-100">
         <img src="images/fist.png" class="fist4">
         <h2 class="h24">'RESPECT EXISTENCE OR EXPECT RESISTANCE'
             <h5 class="h52">- Violator</h5>
@@ -94,7 +95,7 @@
             anti-zwart geweld en andere vormen van ongelijkheid.</p>
      </div>
 
-     <div class="alinea5">
+     <div class="alinea5" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-100">
         <img src="images/fist.png" class="fist5">
         <h2 class="h25">'USE YOUR PRIVILEGE TO FIGHT INEQUALITY'
             <h5 class="h52">- Peggy McIntosh</h5>
@@ -113,7 +114,7 @@
         </form>
     </div>
 
-     <img src="images/bottomImage.png" class="bottomImage" id="idBottomImage">
+     <img src="images/bottomImage.png" class="bottomImage" id="idBottomImage" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-200">
 
     <div class="callToActionsL">
         <img src="images/megaphone.png" class="megaphone">
@@ -154,6 +155,11 @@
      <img src="images/footer.png" class="footer">
 
      <script src="js/main.js"></script>
+
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
     </body>
 
 </html>
